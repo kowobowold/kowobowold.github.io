@@ -1,0 +1,151 @@
+:root {
+    --font: "Roboto Mono", sans-serif;
+    --background: #E7E5E6;
+    --text: #080506;
+    --accent: #F37331;
+    --title: 4rem;
+    --header: 2rem;
+    --line: 1.5rem;
+    --icon: 2rem;
+    --width: 32rem;
+    --border: 2rem;
+    --padding: 1rem;
+    --transition: 0.1s;
+    --dt: 0.5s;
+    --px: 1rem;
+    --blur: 0.05rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0rem;
+    font-family: var(--font);
+    background-color: var(--background);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    filter: blur(var(--blur));
+}
+
+nav {
+    height: 200%;
+    background-color: var(--text);
+    display: flex;
+}
+
+nav > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    font-family: var(--font);
+}
+
+article {
+    width: var(--width);
+    padding: var(--border);
+}
+
+section {
+    display: none;
+}
+
+h1 {
+    margin: 0rem;
+    font-size: var(--title);
+}
+
+h2 {
+    margin: 0rem;
+    font-size: var(--header);
+}
+
+p {
+    margin: 0rem;
+    line-height: var(--line);
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+#links > div {
+    margin-top: var(--padding);
+    gap: var(--padding);
+    display: flex;
+}
+
+svg {
+    width: var(--icon);
+    height: var(--icon);
+    fill: currentColor;
+}
+
+.icon {
+    width: fit-content;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clickable {
+    padding: var(--padding);
+    background-color: var(--text);
+    color: var(--background);
+    transition: var(--transition);
+}
+
+.clickable:hover {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+.animup {
+    animation-name: animup;
+    animation-duration: var(--dt);
+    animation-fill-mode: both;
+}
+
+.animdown {
+    animation-name: animdown;
+    animation-duration: var(--dt);
+    animation-fill-mode: both;
+}
+
+.animside {
+    animation-name: animside;
+    animation-duration: var(--dt);
+    animation-fill-mode: both;
+}
+
+@keyframes animup {
+    0% {
+        transform: translateY(var(--px));
+        opacity: 0;
+    }
+}
+
+@keyframes animdown {
+    0% {
+        transform: translateY(calc(-1 * var(--px)));
+        opacity: 0;
+    }
+}
+
+@keyframes animside {
+    0% {
+        transform: translateX(var(--px));
+        opacity: 0;
+    }
+}
