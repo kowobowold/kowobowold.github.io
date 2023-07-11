@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
 :root {
-    --font: "Roboto Mono", sans-serif;
+    --font: "Roboto Mono", monospace;
     --background: #E7E5E6;
     --text: #080506;
     --accent: #F37331;
